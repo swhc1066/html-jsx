@@ -1,9 +1,13 @@
+/* --- Reset ---
+   Removes default margins/padding; border-box keeps width predictable. */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* --- Page layout ---
+   Centered content, full-height; background and font set here. */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,6 +18,8 @@ body {
     padding: 20px;
 }
 
+/* --- Cards container ---
+   Horizontal row of pricing cards; 24px gap, centered. */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -23,6 +29,8 @@ body {
     align-items: flex-start;
 }
 
+/* --- Card (single plan) ---
+   Fixed width, min height; content stacks vertically, CTA at bottom. */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +42,13 @@ body {
     flex-shrink: 0;
 }
 
+/* Wrapper for title, price, and feature list (keeps CTA separate). */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* --- Card typography --- */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +57,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price row: amount and period aligned on baseline. */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -65,16 +76,19 @@ body {
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Space above the card CTA button. */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* "Includes:" / "Everything in Hobby, plus:" label. */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* Feature list: no bullets, flex rows for checkmark + text. */
 .features-list {
     list-style: none;
     padding: 0;
@@ -95,6 +109,8 @@ body {
     font-weight: 400;
 }
 
+/* --- Buttons ---
+   Pill shape; secondary = light gray, primary = dark (Pro CTA). */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -117,6 +133,7 @@ body {
     background-color: #D8D6CE;
 }
 
+/* Primary (dark) variant for main CTA. */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -130,6 +147,8 @@ body {
     background-color: #333;
 }
 
+/* --- Page label ---
+   Fixed badge at top center ("HTML version"); dev-only. */
 .page-label {
     position: fixed;
     top: 16px;
